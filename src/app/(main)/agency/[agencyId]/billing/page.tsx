@@ -36,10 +36,10 @@ const page = async ({ params }: Props) => {
     },
   })
 
-  const prices = await stripe.prices.list({
+  /*/const prices = await stripe.prices.list({
     product: process.env.NEXT_PLURA_PRODUCT_ID,
     active: true,
-  })
+  })/*/
 
   const currentPlanDetails = pricingCards.find(
     (c) => c.priceId === agencySubscription?.Subscription?.priceId
